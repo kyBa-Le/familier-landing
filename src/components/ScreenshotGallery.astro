@@ -19,18 +19,18 @@ const screenshots = [
 ];
 ---
 
-<section id="app-preview" class="py-12 bg-slate-100/70 border-y border-slate-200/80">
+<section id="app-preview" class="py-12 bg-[#F4ECE3]/70 border-y border-[#E8DDD1]">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-6 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#2D1F18] tracking-tight">
         App preview
       </h2>
-      <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700">
+      <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#EBDCD0] text-[#6E5A50]">
         6 Screenshots
       </span>
     </div>
-    <span class="text-xs font-medium text-slate-500 hidden sm:inline-flex items-center gap-1">
-      <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <span class="text-xs font-medium text-[#8C7467] hidden sm:inline-flex items-center gap-1">
+      <svg class="w-4 h-4 text-[#A89083]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
       Scroll horizontally to view more
@@ -44,10 +44,10 @@ const screenshots = [
   >
     {screenshots.map((item, index) => (
       <div 
-        class="snap-center shrink-0 w-[260px] sm:w-[280px] md:w-[300px] bg-slate-900 rounded-[2rem] p-2.5 shadow-xl ring-1 ring-slate-900/10 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+        class="snap-center shrink-0 w-[260px] sm:w-[280px] md:w-[300px] bg-[#2D1F18] rounded-[2rem] p-2.5 shadow-xl ring-1 ring-black/10 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
       >
         <!-- Phone Frame Inner Wrapper -->
-        <div class="relative w-full h-[520px] sm:h-[560px] md:h-[600px] overflow-hidden rounded-[1.4rem] bg-slate-950">
+        <div class="relative w-full h-[520px] sm:h-[560px] md:h-[600px] overflow-hidden rounded-[1.4rem] bg-black">
           <Image
             src={item.src}
             alt={item.alt}

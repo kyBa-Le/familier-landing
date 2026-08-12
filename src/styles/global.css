@@ -14,15 +14,15 @@
     height: 6px;
   }
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: rgba(226, 232, 240, 0.6);
+    background: rgba(239, 229, 219, 0.7);
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(148, 163, 184, 0.5);
+    background: rgba(200, 90, 50, 0.35);
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 116, 139, 0.8);
+    background: rgba(200, 90, 50, 0.7);
   }
 }
 
@@ -34,6 +34,6 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #FAF6F0;
+  color: #2D1F18;
 }

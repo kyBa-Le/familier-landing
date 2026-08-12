@@ -4,14 +4,14 @@ import { siteConfig } from '../config/site';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+<footer class="bg-[#1F1511] text-[#A89285] py-12 border-t border-[#362720]">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
     <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
-      <span class="font-bold text-slate-100 text-base">
+      <span class="font-bold text-[#FAF6F0] text-base">
         {siteConfig.name}
       </span>
-      <span class="hidden sm:inline text-slate-600">•</span>
-      <span class="text-xs text-slate-400">
+      <span class="hidden sm:inline text-[#5A453A]">•</span>
+      <span class="text-xs text-[#A89285]">
         © {currentYear} {siteConfig.name}. Built as an open-source project.
       </span>
     </div>
@@ -21,7 +21,7 @@ const currentYear = new Date().getFullYear();
         href={siteConfig.github.mobile}
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-emerald-500 rounded px-1"
+        class="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-[#C85A32] rounded px-1"
       >
         Mobile Repository
       </a>
@@ -29,7 +29,7 @@ const currentYear = new Date().getFullYear();
         href={siteConfig.github.backend}
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-emerald-500 rounded px-1"
+        class="hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-[#C85A32] rounded px-1"
       >
         Backend Repository
       </a>

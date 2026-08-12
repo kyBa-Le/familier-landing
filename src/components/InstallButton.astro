@@ -22,13 +22,13 @@ const sizeClasses = size === 'lg'
       type="button"
       id="install-btn-placeholder"
       aria-label="Install Familier — Release APK link coming soon"
-      class={`inline-flex items-center justify-center gap-2.5 rounded-xl text-white bg-slate-900 hover:bg-slate-800 active:bg-slate-950 shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${sizeClasses} ${className}`}
+      class={`inline-flex items-center justify-center gap-2.5 rounded-xl text-white bg-[#C85A32] hover:bg-[#B84E27] active:bg-[#A3421C] shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C85A32] focus:ring-offset-2 ${sizeClasses} ${className}`}
     >
-      <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+      <svg class="w-5 h-5 text-[#FFE3D8] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
       <span>Install APK</span>
-      <span class="text-xs font-normal bg-emerald-950/80 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-md ml-1">
+      <span class="text-xs font-normal bg-[#873315]/80 text-[#FFD8C7] border border-[#E87E5A]/40 px-2 py-0.5 rounded-md ml-1">
         Coming Soon
       </span>
     </button>
@@ -36,10 +36,10 @@ const sizeClasses = size === 'lg'
     <div 
       id="install-tooltip" 
       role="tooltip" 
-      class="opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 w-64 p-2.5 text-xs text-center text-slate-100 bg-slate-900 rounded-lg shadow-xl border border-slate-700 pointer-events-none z-30"
+      class="opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-200 absolute left-1/2 -translate-x-1/2 bottom-full mb-2.5 w-64 p-2.5 text-xs text-center text-[#FAF6F0] bg-[#2D1F18] rounded-lg shadow-xl border border-[#4A382F] pointer-events-none z-30"
     >
       Official APK release link pending. Check back soon or visit our GitHub repos below.
-      <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-slate-900"></div>
+      <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-[#2D1F18]"></div>
     </div>
   </div>
 ) : (
@@ -48,7 +48,7 @@ const sizeClasses = size === 'lg'
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Install Familier APK from GitHub Release page"
-    class={`inline-flex items-center justify-center gap-2.5 rounded-xl text-white bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${sizeClasses} ${className}`}
+    class={`inline-flex items-center justify-center gap-2.5 rounded-xl text-white bg-[#C85A32] hover:bg-[#B84E27] active:bg-[#A3421C] shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#C85A32] focus:ring-offset-2 ${sizeClasses} ${className}`}
   >
     <svg class="w-5 h-5 text-white shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
