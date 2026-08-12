@@ -172,21 +172,24 @@ All 6 app screenshots and logo assets were integrated, optimized, and tested. Th
 
 ---
 
-### Phase 17 — Deployment Preparation
+### Phase 17 — GitHub Repository & Deployment Preparation
 * **Done:**
+  * Initialized Git repository, configured `.gitignore` (ignoring `node_modules`, `.astro`, `dist`, `test-results`, `.vercel`).
+  * Created public GitHub repository and pushed source code: [https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing).
   * Created `vercel.json` with build settings (`buildCommand: "npm run build"`, `outputDirectory: "dist"`, `framework: "astro"`).
   * Verified local production build assets inside `dist/`.
 * **Verification:**
+  * Source code is published live on GitHub (`kyBa-Le/familier-landing`).
   * Static build bundle generated cleanly in `dist/` ready for Vercel static deployment.
 
 ---
 
-## Remaining User Actions (Before Production Release / Phase 18)
+## Remaining User Actions (Before Phase 18 Production Verification)
 
 1. **Replace GitHub Release Placeholder:**
    * In `src/config/site.ts`, replace `"GITHUB_RELEASE_URL_PLACEHOLDER"` with the actual GitHub Release APK download link (e.g. `https://github.com/pnv-familier/mobile/releases/tag/v1.0.0`).
-2. **Authorize Vercel Deployment:**
-   * Authorize Vercel to access the `familier_landing` repository and import the project.
+2. **Vercel Authorization / Import:**
+   * Import [https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing) in the Vercel Dashboard or run `npx vercel login` in terminal to authorize Vercel CLI deployment.
 3. **Configure Custom Domain (Optional):**
    * In `src/config/site.ts` and `astro.config.mjs`, update `siteUrl` / `site` if deploying to a custom domain.
 

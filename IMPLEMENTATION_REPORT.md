@@ -5,6 +5,7 @@
 - Type check: **PASS** (`npm run check` completed with 0 errors, 0 warnings, 0 hints)
 - Production build: **PASS** (`npm run build` completed static generation in 2.07s)
 - E2E Tests: **PASS** (`npm test` passed 14/14 Playwright tests across Desktop Chromium and Mobile Chrome)
+- GitHub Repository (Phase 17): **PASS** ([https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing))
 - Deployment Prep (Phase 17): **PASS** (`vercel.json` configured for static Astro deployment)
 
 ## Assets
@@ -22,6 +23,7 @@
 
 - Mobile repository: **PASS** (`https://github.com/pnv-familier/mobile`)
 - Backend repository: **PASS** (`https://github.com/pnv-familier/backend`)
+- Landing repository: **PASS** (`https://github.com/kyBa-Le/familier-landing`)
 - GitHub Release: **PLACEHOLDER SAFE** (`GITHUB_RELEASE_URL_PLACEHOLDER` handled gracefully with tooltip & click alert)
 
 ## SEO & Accessibility
@@ -35,5 +37,6 @@
 ## Remaining User Actions (Before Phase 18 Production Verification)
 
 - Replace `GITHUB_RELEASE_URL_PLACEHOLDER` in `src/config/site.ts` with real release URL when available.
-- Authorize deployment provider (Vercel) to import `familier_landing` repository.
+- Authorize Vercel by importing [https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing) in Vercel Dashboard (or running `npx vercel login`).
+
 
