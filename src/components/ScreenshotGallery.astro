@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+
+// Import all 6 screenshots directly so Astro optimizes them into WebP/AVIF
+import shot1 from '../assets/screenshots/Screenshot_20260322_224802.jpg';
+import shot2 from '../assets/screenshots/Screenshot_20260322_225012.jpg';
+import shot3 from '../assets/screenshots/Screenshot_20260322_225016.jpg';
+import shot4 from '../assets/screenshots/Screenshot_20260322_225107.jpg';
+import shot5 from '../assets/screenshots/Screenshot_20260322_225115.jpg';
+import shot6 from '../assets/screenshots/Screenshot_20260322_225417.jpg';
+
+const screenshots = [
+  { src: shot1, alt: 'Familier AI conversational chat interface' },
+  { src: shot2, alt: 'Familier activity dashboard and family schedule' },
+  { src: shot3, alt: 'Familier intelligent suggestions and family tasks' },
+  { src: shot4, alt: 'Familier member profile and interaction management' },
+  { src: shot5, alt: 'Familier family event coordination screen' },
+  { src: shot6, alt: 'Familier application preference and settings panel' },
+];
+---
+
+<section id="app-preview" class="py-12 bg-slate-100/70 border-y border-slate-200/80">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+        App preview
+      </h2>
+      <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700">
+        6 Screenshots
+      </span>
+    </div>
+    <span class="text-xs font-medium text-slate-500 hidden sm:inline-flex items-center gap-1">
+      <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+      Scroll horizontally to view more
+    </span>
+  </div>
+
+  <!-- Horizontal Scroll Snap Container -->
+  <div 
+    class="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory px-4 sm:px-6 pb-6 pt-2 custom-scrollbar touch-pan-x"
+    aria-label="App Screenshots Gallery"
+  >
+    {screenshots.map((item, index) => (
+      <div 
+        class="snap-center shrink-0 w-[260px] sm:w-[280px] md:w-[300px] bg-slate-900 rounded-[2rem] p-2.5 shadow-xl ring-1 ring-slate-900/10 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <!-- Phone Frame Inner Wrapper -->
+        <div class="relative w-full h-[520px] sm:h-[560px] md:h-[600px] overflow-hidden rounded-[1.4rem] bg-slate-950">
+          <Image
+            src={item.src}
+            alt={item.alt}
+            width={300}
+            height={600}
+            format="webp"
+            quality={85}
+            class="w-full h-full object-cover object-top select-none"
+            loading={index < 2 ? "eager" : "lazy"}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

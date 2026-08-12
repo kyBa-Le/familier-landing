@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import AppHero from '../components/AppHero.astro';
+import ScreenshotGallery from '../components/ScreenshotGallery.astro';
+import AboutSection from '../components/AboutSection.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import SourceCodeSection from '../components/SourceCodeSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <Header />
+  <main>
+    <AppHero />
+    <ScreenshotGallery />
+    <AboutSection />
+    <FeatureSection />
+    <SourceCodeSection />
+  </main>
+  <Footer />
+</BaseLayout>
