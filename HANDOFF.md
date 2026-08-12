@@ -180,18 +180,28 @@ All 6 app screenshots and logo assets were integrated, optimized, and tested. Th
   * Verified local production build assets inside `dist/`.
 * **Verification:**
   * Source code is published live on GitHub (`kyBa-Le/familier-landing`).
-  * Static build bundle generated cleanly in `dist/` ready for Vercel static deployment.
+  * Static build bundle generated cleanly in `dist/`.
 
 ---
 
-## Remaining User Actions (Before Phase 18 Production Verification)
+### Phase 18 — Production Verification
+* **Done:**
+  * Verified live production site on Vercel: [https://familier-landing.vercel.app/](https://familier-landing.vercel.app/).
+  * Verified HTTP 200 response for Homepage (`/`), Robots (`/robots.txt`), and Sitemap (`/sitemap-index.xml`).
+  * Ran full Playwright E2E test suite directly against `https://familier-landing.vercel.app/`.
+* **Verification:**
+  * **14/14 tests PASSED** across Desktop Chromium and Mobile Chrome viewports.
+  * Verified 0 horizontal overflow at 390px mobile breakpoint.
+  * Verified logo, 6 WebP screenshots, single `<h1>`, Open Graph metadata, JSON-LD schema, and repository links.
+
+---
+
+## Remaining User Actions (Optional / Future Maintenance)
 
 1. **Replace GitHub Release Placeholder:**
-   * In `src/config/site.ts`, replace `"GITHUB_RELEASE_URL_PLACEHOLDER"` with the actual GitHub Release APK download link (e.g. `https://github.com/pnv-familier/mobile/releases/tag/v1.0.0`).
-2. **Vercel Authorization / Import:**
-   * Import [https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing) in the Vercel Dashboard or run `npx vercel login` in terminal to authorize Vercel CLI deployment.
-3. **Configure Custom Domain (Optional):**
-   * In `src/config/site.ts` and `astro.config.mjs`, update `siteUrl` / `site` if deploying to a custom domain.
+   * In `src/config/site.ts`, replace `"GITHUB_RELEASE_URL_PLACEHOLDER"` with the actual GitHub Release APK download link (e.g. `https://github.com/pnv-familier/mobile/releases/tag/v1.0.0`) when available.
+2. **Configure Custom Domain (Optional):**
+   * In `src/config/site.ts` and `astro.config.mjs`, update `siteUrl` / `site` if attaching a custom domain in Vercel.
 
 ---
 

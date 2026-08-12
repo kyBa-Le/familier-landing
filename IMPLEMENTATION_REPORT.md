@@ -7,6 +7,7 @@
 - E2E Tests: **PASS** (`npm test` passed 14/14 Playwright tests across Desktop Chromium and Mobile Chrome)
 - GitHub Repository (Phase 17): **PASS** ([https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing))
 - Deployment Prep (Phase 17): **PASS** (`vercel.json` configured for static Astro deployment)
+- Production Verification (Phase 18): **PASS** ([https://familier-landing.vercel.app/](https://familier-landing.vercel.app/))
 
 ## Assets
 
@@ -24,19 +25,20 @@
 - Mobile repository: **PASS** (`https://github.com/pnv-familier/mobile`)
 - Backend repository: **PASS** (`https://github.com/pnv-familier/backend`)
 - Landing repository: **PASS** (`https://github.com/kyBa-Le/familier-landing`)
+- Live Production URL: **PASS** ([https://familier-landing.vercel.app/](https://familier-landing.vercel.app/))
 - GitHub Release: **PLACEHOLDER SAFE** (`GITHUB_RELEASE_URL_PLACEHOLDER` handled gracefully with tooltip & click alert)
 
 ## SEO & Accessibility
 
 - Metadata & Open Graph: **PASS** (`BaseLayout.astro` contains full OG and Twitter card tags)
 - JSON-LD Structured Data: **PASS** (`SoftwareApplication` schema included)
-- Sitemap: **PASS** (`sitemap-index.xml` generated in `dist/`)
-- robots.txt: **PASS** (`public/robots.txt` generated)
+- Sitemap: **PASS** (`sitemap-index.xml` verified live at `https://familier-landing.vercel.app/sitemap-index.xml`)
+- robots.txt: **PASS** (`robots.txt` verified live at `https://familier-landing.vercel.app/robots.txt`)
 - Heading Structure: **PASS** (Single `<h1>` on page, logical `<h2>` hierarchy)
 
-## Remaining User Actions (Before Phase 18 Production Verification)
+## Remaining User Actions (Optional)
 
 - Replace `GITHUB_RELEASE_URL_PLACEHOLDER` in `src/config/site.ts` with real release URL when available.
-- Authorize Vercel by importing [https://github.com/kyBa-Le/familier-landing](https://github.com/kyBa-Le/familier-landing) in Vercel Dashboard (or running `npx vercel login`).
+
 
 

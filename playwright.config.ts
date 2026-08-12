@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:4321',
+    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:4321',
     trace: 'on-first-retry',
   },
   projects: [
@@ -21,10 +21,14 @@ export default defineConfig({
       use: { ...devices['Pixel 5'] },
     },
   ],
-  webServer: {
-    command: 'npx vite preview --port 4321',
-    url: 'http://localhost:4321',
-    reuseExistingServer: true,
-    timeout: 30 * 1000,
-  },
+  ...(process.env.PLAYWRIGHT_TEST_BASE_URL
+    ? {}
+    : {
+        webServer: {
+          command: 'npx vite preview --port 4321',
+          url: 'http://localhost:4321',
+          reuseExistingServer: true,
+          timeout: 30 * 1000,
+        },
+      }),
 });
