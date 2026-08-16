@@ -8,7 +8,7 @@ export const siteConfig = {
   github: {
     mobile: "https://github.com/pnv-familier/mobile",
     backend: "https://github.com/pnv-familier/backend",
-    release: "GITHUB_RELEASE_URL_PLACEHOLDER",
+    release: "https://github.com/pnv-familier/mobile/releases/download/official/familier-v1.apk",
   },
   features: [
     {

@@ -44,22 +44,23 @@ test.describe('Familier Landing Page E2E Tests', () => {
     await expect(backendLink).toBeVisible();
   });
 
-  test('Release placeholder button does NOT navigate to an invalid external link', async ({ page }) => {
+  test('Release button links to official APK download link or safe placeholder', async ({ page }) => {
     await page.goto('/');
     
-    const installBtn = page.locator('#install-btn-placeholder');
-    if (await installBtn.isVisible()) {
-      // Set up dialog listener to confirm alert
+    const placeholderBtn = page.locator('#install-btn-placeholder');
+    const releaseLink = page.locator('a:has-text("Install APK")');
+
+    if (await placeholderBtn.isVisible()) {
       let dialogMessage = '';
       page.once('dialog', async (dialog) => {
         dialogMessage = dialog.message();
         await dialog.accept();
       });
-
-      await installBtn.click();
+      await placeholderBtn.click();
       expect(dialogMessage).toContain('Familier GitHub Release APK package is coming soon!');
-      // Verify page URL did not change to an external site
-      expect(page.url()).not.toContain('github.com/releases');
+    } else {
+      await expect(releaseLink).toBeVisible();
+      await expect(releaseLink).toHaveAttribute('href', 'https://github.com/pnv-familier/mobile/releases/download/official/familier-v1.apk');
     }
   });
 

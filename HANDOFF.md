@@ -199,13 +199,20 @@ All 6 app screenshots and logo assets were integrated, optimized, and tested. Th
   * Verified 0 horizontal overflow at 390px mobile breakpoint.
   * Verified logo, 6 WebP screenshots, single `<h1>`, Open Graph metadata, JSON-LD schema, and repository links.
 
+### Official APK Release Link Integration
+* **Done:**
+  * Updated `src/config/site.ts` `github.release` setting with official APK release link: [https://github.com/pnv-familier/mobile/releases/download/official/familier-v1.apk](https://github.com/pnv-familier/mobile/releases/download/official/familier-v1.apk).
+  * `InstallButton.astro` now automatically renders the direct download button for the official APK.
+  * Updated `tests/landing.spec.ts` test suite to assert the official APK download URL.
+* **Verification:**
+  * **14/14 tests PASSED** locally and against production.
+  * Clicking "Install APK" initiates direct download of `familier-v1.apk`.
+
 ---
 
 ## Remaining User Actions (Optional / Future Maintenance)
 
-1. **Replace GitHub Release Placeholder:**
-   * In `src/config/site.ts`, replace `"GITHUB_RELEASE_URL_PLACEHOLDER"` with the actual GitHub Release APK download link (e.g. `https://github.com/pnv-familier/mobile/releases/tag/v1.0.0`) when available.
-2. **Configure Custom Domain (Optional):**
+1. **Configure Custom Domain (Optional):**
    * In `src/config/site.ts` and `astro.config.mjs`, update `siteUrl` / `site` if attaching a custom domain in Vercel.
 
 ---
